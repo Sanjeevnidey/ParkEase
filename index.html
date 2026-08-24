@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>ParkEase — Smarter parking starts here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { brand: "#0d7c66", lime: "#d8f55b", ink: "#10201f" },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header class="absolute inset-x-0 top-0 z-20">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-xl font-extrabold text-white"
+          ><span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-lime text-ink"
+            ><i data-lucide="parking-circle" class="h-5"></i></span
+          >ParkEase</a
+        >
+        <div class="hidden items-center gap-7 md:flex">
+          <a class="nav-link !text-white/80 hover:!text-white" href="#features"
+            >Features</a
+          ><a
+            class="nav-link !text-white/80 hover:!text-white"
+            href="#how-it-works"
+            >How it works</a
+          ><a
+            class="nav-link !text-white/80 hover:!text-white"
+            href="login.html"
+            >Sign in</a
+          ><a class="btn-light !py-2.5" href="register.html">Create account</a>
+        </div>
+        <a
+          class="rounded-lg border border-white/30 px-3 py-2 text-sm font-bold text-white md:hidden"
+          href="login.html"
+          >Sign in</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="noise relative overflow-hidden pt-36 text-white">
+        <div
+          class="absolute -right-28 top-16 h-96 w-96 rounded-full bg-brand/50 blur-3xl"
+        ></div>
+        <div
+          class="relative mx-auto grid max-w-7xl gap-12 px-6 pb-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:pb-28"
+        >
+          <div class="fade-in">
+            <div
+              class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-sm text-white/80"
+            >
+              <span class="status-dot bg-lime"></span> Live parking availability
+            </div>
+            <h1
+              class="display max-w-2xl text-5xl font-extrabold leading-[1.05] sm:text-6xl"
+            >
+              Your parking spot, <span class="text-lime">without</span> the
+              search.
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+              A simple, intelligent way to discover, reserve, and manage parking
+              spaces—all before you reach the gate.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                href="register.html"
+                class="btn-primary !bg-lime !text-ink hover:!bg-[#c9e94c]"
+                >Find a space
+                <i data-lucide="arrow-up-right" class="h-4"></i></a
+              ><a
+                href="#how-it-works"
+                class="btn-light bg-white/10 !text-white hover:!bg-white/20"
+                >See how it works</a
+              >
+            </div>
+            <div class="mt-11 flex gap-8 text-sm">
+              <div>
+                <strong class="block text-2xl text-lime">95%</strong
+                ><span class="text-slate-400">Faster parking</span>
+              </div>
+              <div>
+                <strong class="block text-2xl text-lime">24/7</strong
+                ><span class="text-slate-400">Slot visibility</span>
+              </div>
+              <div>
+                <strong class="block text-2xl text-lime">1,200+</strong
+                ><span class="text-slate-400">Active users</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative mx-auto w-full max-w-md rounded-[1.75rem] border border-white/15 bg-white/10 p-4 shadow-2xl backdrop-blur"
+          >
+            <div class="rounded-2xl bg-[#f5f9f7] p-5 text-ink">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-slate-500">Welcome back, Rahul</p>
+                  <h2 class="mt-1 text-xl font-bold">Campus North</h2>
+                </div>
+                <span
+                  class="grid h-10 w-10 place-items-center rounded-full bg-brand text-white"
+                  ><i data-lucide="bell" class="h-5"></i
+                ></span>
+              </div>
+              <div class="mt-5 rounded-xl bg-ink p-4 text-white">
+                <div class="flex justify-between text-sm text-slate-300">
+                  <span>Available right now</span
+                  ><span class="text-lime">Updated now</span>
+                </div>
+                <div class="mt-2 flex items-end justify-between">
+                  <strong class="text-4xl">16</strong
+                  ><span class="rounded-lg bg-white/10 px-2 py-1 text-xs"
+                    >of 48 slots</span
+                  >
+                </div>
+              </div>
+              <div class="mt-5">
+                <div class="mb-3 flex justify-between text-sm font-bold">
+                  <span>Level A</span><span class="text-brand">View map</span>
+                </div>
+                <div class="grid grid-cols-6 gap-2">
+                  <span class="aspect-square rounded-md bg-brand"></span
+                  ><span class="aspect-square rounded-md bg-brand"></span
+                  ><span
+                    class="aspect-square rounded-md bg-lime ring-2 ring-[#9abb26]"
+                  ></span
+                  ><span class="aspect-square rounded-md bg-slate-200"></span
+                  ><span class="aspect-square rounded-md bg-brand"></span
+                  ><span class="aspect-square rounded-md bg-lime"></span
+                  ><span class="aspect-square rounded-md bg-slate-200"></span
+                  ><span class="aspect-square rounded-md bg-brand"></span
+                  ><span class="aspect-square rounded-md bg-lime"></span
+                  ><span class="aspect-square rounded-md bg-lime"></span
+                  ><span class="aspect-square rounded-md bg-slate-200"></span
+                  ><span class="aspect-square rounded-md bg-brand"></span>
+                </div>
+              </div>
+              <button
+                class="mt-5 w-full rounded-xl bg-brand py-3 text-sm font-bold text-white"
+              >
+                Reserve selected space
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="features" class="mx-auto max-w-7xl px-6 py-20">
+        <div class="max-w-2xl">
+          <p class="font-bold uppercase tracking-[.18em] text-brand text-xs">
+            Everything in one place
+          </p>
+          <h2 class="mt-3 text-4xl font-extrabold">
+            Parking made calm and predictable.
+          </h2>
+          <p class="mt-4 text-slate-600">
+            ParkEase brings real-time visibility and simple control to everyday
+            parking.
+          </p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          <article class="stat-card">
+            <span
+              class="grid h-11 w-11 place-items-center rounded-xl bg-emerald-100 text-brand"
+              ><i data-lucide="map-pin"></i
+            ></span>
+            <h3 class="mt-5 text-lg font-bold">Live slot map</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">
+              See exactly which spaces are free, occupied, or reserved before
+              you arrive.
+            </p>
+          </article>
+          <article class="stat-card">
+            <span
+              class="grid h-11 w-11 place-items-center rounded-xl bg-lime text-ink"
+              ><i data-lucide="calendar-check"></i
+            ></span>
+            <h3 class="mt-5 text-lg font-bold">Easy reservations</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">
+              Pick your preferred space and secure it in a few focused clicks.
+            </p>
+          </article>
+          <article class="stat-card">
+            <span
+              class="grid h-11 w-11 place-items-center rounded-xl bg-orange-100 text-orange-700"
+              ><i data-lucide="bar-chart-3"></i
+            ></span>
+            <h3 class="mt-5 text-lg font-bold">Clear insights</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">
+              Admins get a simple view of occupancy, payments, and parking
+              trends.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="how-it-works" class="bg-white">
+        <div class="mx-auto max-w-7xl px-6 py-20">
+          <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
+            <div>
+              <p
+                class="font-bold uppercase tracking-[.18em] text-brand text-xs"
+              >
+                How it works
+              </p>
+              <h2 class="mt-3 text-4xl font-extrabold">
+                Park in three simple steps.
+              </h2>
+              <p class="mt-4 text-slate-600">Less circling. More arriving.</p>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-3">
+              <div>
+                <span class="text-5xl font-extrabold text-emerald-100">01</span>
+                <h3 class="mt-3 font-bold">Check availability</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  View live spaces across every level.
+                </p>
+              </div>
+              <div>
+                <span class="text-5xl font-extrabold text-emerald-100">02</span>
+                <h3 class="mt-3 font-bold">Reserve a slot</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Choose a spot that fits your visit.
+                </p>
+              </div>
+              <div>
+                <span class="text-5xl font-extrabold text-emerald-100">03</span>
+                <h3 class="mt-3 font-bold">Park with ease</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Arrive knowing your space is ready.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-ink py-8 text-center text-sm text-slate-400">
+      © 2026 ParkEase. Automated Parking Management System.
+    </footer>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

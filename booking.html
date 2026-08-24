@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Book a Slot — ParkEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header class="border-b bg-white">
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4"
+      >
+        <a
+          href="dashboard.html"
+          class="flex items-center gap-2 text-xl font-extrabold"
+          ><span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-brand text-black"
+            ><i data-lucide="parking-circle" class="h-5"></i></span
+          >ParkEase</a
+        >
+        <nav class="hidden gap-6 text-sm sm:flex">
+          <a class="nav-link" href="dashboard.html">Dashboard</a
+          ><a data-page="booking.html" class="nav-link" href="booking.html"
+            >Book a slot</a
+          ><a data-page="history.html" class="nav-link" href="history.html"
+            >History</a
+          >
+        </nav>
+        <a href="dashboard.html" class="text-sm font-bold text-brand"
+          >← Dashboard</a
+        >
+      </div>
+    </header>
+    <main class="mx-auto max-w-7xl px-5 py-8">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[.15em] text-brand">
+          New reservation
+        </p>
+        <h1 class="mt-2 text-3xl font-extrabold">Choose your parking space</h1>
+        <p class="mt-2 text-slate-600">
+          Select an available slot for your campus visit today.
+        </p>
+      </div>
+      <div class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
+        <section class="stat-card">
+          <div
+            class="flex flex-wrap justify-between gap-4 border-b border-slate-100 pb-5"
+          >
+            <div>
+              <h2 class="text-lg font-extrabold">North Campus · Level A</h2>
+              <p class="mt-1 text-sm text-slate-500">16 spaces available</p>
+            </div>
+            <div class="flex rounded-lg bg-slate-100 p-1 text-sm font-bold">
+              <button
+                class="rounded-md bg-white px-3 py-1.5 shadow-sm text-brand"
+              >
+                Level A</button
+              ><button class="px-3 py-1.5 text-slate-500">Level B</button>
+            </div>
+          </div>
+          <div
+            class="my-5 flex items-center justify-center rounded-xl border border-dashed border-slate-300 bg-slate-50 py-3 text-xs font-bold tracking-widest text-slate-400"
+          >
+            ENTRANCE ↓
+          </div>
+          <div class="grid grid-cols-3 gap-3 sm:grid-cols-4">
+            <button class="slot available" data-slot="A-01">
+              <b>A-01</b
+              ><small class="mt-1 block text-xs">Available</small></button
+            ><button class="slot occupied" disabled>
+              <b>A-02</b
+              ><small class="mt-1 block text-xs">Occupied</small></button
+            ><button class="slot available" data-slot="A-03">
+              <b>A-03</b
+              ><small class="mt-1 block text-xs">Available</small></button
+            ><button class="slot reserved">
+              <b>A-04</b
+              ><small class="mt-1 block text-xs">Reserved</small></button
+            ><button class="slot available" data-slot="A-05">
+              <b>A-05</b
+              ><small class="mt-1 block text-xs">Available</small></button
+            ><button class="slot occupied" disabled>
+              <b>A-06</b
+              ><small class="mt-1 block text-xs">Occupied</small></button
+            ><button class="slot available" data-slot="A-07">
+              <b>A-07</b
+              ><small class="mt-1 block text-xs">Available</small></button
+            ><button class="slot available" data-slot="A-08">
+              <b>A-08</b
+              ><small class="mt-1 block text-xs">Available</small></button
+            ><button class="slot occupied" disabled>
+              <b>A-09</b
+              ><small class="mt-1 block text-xs">Occupied</small></button
+            ><button class="slot available" data-slot="A-10">
+              <b>A-10</b
+              ><small class="mt-1 block text-xs">Available</small></button
+            ><button class="slot available" data-slot="A-11">
+              <b>A-11</b
+              ><small class="mt-1 block text-xs">Available</small></button
+            ><button class="slot occupied" disabled>
+              <b>A-12</b><small class="mt-1 block text-xs">Occupied</small>
+            </button>
+          </div>
+          <div class="mt-5 flex gap-4 text-xs font-semibold">
+            <span><i class="status-dot mr-1 bg-emerald-500"></i>Available</span
+            ><span><i class="status-dot mr-1 bg-slate-300"></i>Occupied</span
+            ><span><i class="status-dot mr-1 bg-amber-400"></i>Reserved</span>
+          </div>
+        </section>
+        <aside class="h-fit rounded-2xl bg-ink p-6 text-black">
+          <p class="text-sm text-black">Reservation summary</p>
+          <h2 class="mt-5 text-2xl font-extrabold">
+            Slot <span data-selected-slot class="text-lime">—</span>
+          </h2>
+          <div class="mt-6 space-y-4 border-y border-white/10 py-5 text-sm">
+            <div class="flex justify-between">
+              <span class="text-slate-400">Date</span><b>24 Aug 2026</b>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Arrival</span><b>10:30 AM</b>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Vehicle</span><b>DL 01 AB 1234</b>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Est. fee</span><b>₹30/hour</b>
+            </div>
+          </div>
+          <button
+            data-book-button
+            disabled
+            class="mt-6 w-full rounded-xl bg-lime py-3 font-bold text-ink disabled:cursor-not-allowed disabled:bg-white/15 disabled:text-slate-400"
+          >
+            Confirm reservation
+          </button>
+          <p class="mt-3 text-center text-xs leading-5 text-slate-400">
+            Your space will be held for 15 minutes after your selected arrival
+            time.
+          </p>
+        </aside>
+      </div>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

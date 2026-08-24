@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Admin Overview — ParkEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
+      <aside class="flex min-h-full flex-col bg-ink p-5 text-white">
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-xl font-extrabold"
+          ><span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-lime text-ink"
+            ><i data-lucide="parking-circle" class="h-5"></i></span
+          >ParkEase</a
+        >
+        <p
+          class="mt-10 px-2 text-xs font-bold uppercase tracking-[.15em] text-slate-500"
+        >
+          Administration
+        </p>
+        <nav class="mt-3 space-y-1">
+          <a class="side-link active !bg-white/10 !text-white" href="admin.html"
+            ><i data-lucide="layout-dashboard"></i>Overview</a
+          ><a class="side-link !text-slate-300" href="#slots"
+            ><i data-lucide="grid-3x3"></i>Parking slots</a
+          ><a class="side-link !text-slate-300" href="#bookings"
+            ><i data-lucide="calendar-days"></i>Bookings</a
+          ><a class="side-link !text-slate-300" href="#payments"
+            ><i data-lucide="credit-card"></i>Payments</a
+          ><a class="side-link !text-slate-300" href="#reports"
+            ><i data-lucide="bar-chart-3"></i>Reports</a
+          >
+        </nav>
+        <div class="mt-auto rounded-xl bg-white/10 p-3">
+          <p class="text-sm font-bold">Admin user</p>
+          <p class="text-xs text-slate-400">System administrator</p>
+        </div>
+      </aside>
+      <main>
+        <header
+          class="flex items-center justify-between border-b bg-white px-6 py-5"
+        >
+          <div>
+            <p class="text-sm text-slate-500">Operations overview</p>
+            <h1 class="text-xl font-extrabold">Admin dashboard</h1>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="hidden text-sm text-slate-500 sm:block"
+              >24 August 2026</span
+            ><button
+              class="grid h-10 w-10 place-items-center rounded-full bg-slate-100"
+            >
+              <i data-lucide="bell" class="h-5"></i>
+            </button>
+          </div>
+        </header>
+        <div class="mx-auto max-w-7xl p-6 sm:p-8">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p
+                class="text-sm font-bold uppercase tracking-[.15em] text-brand"
+              >
+                Live system status
+              </p>
+              <h2 class="mt-1 text-3xl font-extrabold">
+                Campus parking at a glance
+              </h2>
+            </div>
+            <button class="btn-primary">
+              <i data-lucide="plus" class="h-4"></i>Add parking slot
+            </button>
+          </div>
+          <section class="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="stat-card">
+              <p class="text-sm font-semibold text-slate-500">Total slots</p>
+              <b class="mt-3 block text-3xl">148</b>
+              <p class="mt-2 text-xs text-slate-500">Across 3 locations</p>
+            </div>
+            <div class="stat-card">
+              <p class="text-sm font-semibold text-slate-500">
+                Current occupancy
+              </p>
+              <b class="mt-3 block text-3xl"
+                >68<span class="text-lg text-slate-400">%</span></b
+              >
+              <div class="mt-3 h-1.5 overflow-hidden rounded-full bg-slate-100">
+                <div class="h-full w-[68%] rounded-full bg-brand"></div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <p class="text-sm font-semibold text-slate-500">
+                Active bookings
+              </p>
+              <b class="mt-3 block text-3xl">91</b>
+              <p class="mt-2 text-xs font-semibold text-emerald-700">
+                ↑ 12% from yesterday
+              </p>
+            </div>
+            <div class="stat-card">
+              <p class="text-sm font-semibold text-slate-500">
+                Today's revenue
+              </p>
+              <b class="mt-3 block text-3xl">₹4,860</b>
+              <p class="mt-2 text-xs font-semibold text-emerald-700">
+                ↑ 8.4% from yesterday
+              </p>
+            </div>
+          </section>
+          <section class="mt-7 grid gap-6 xl:grid-cols-[1.15fr_.85fr]">
+            <div class="stat-card">
+              <div class="flex justify-between">
+                <div>
+                  <h2 class="text-lg font-extrabold">Occupancy by location</h2>
+                  <p class="mt-1 text-sm text-slate-500">
+                    Real-time slot usage
+                  </p>
+                </div>
+                <button class="text-sm font-bold text-brand">
+                  View report
+                </button>
+              </div>
+              <div class="mt-8 space-y-6">
+                <div>
+                  <div class="mb-2 flex justify-between text-sm">
+                    <b>North Campus</b
+                    ><span class="text-slate-500">38 / 48 occupied</span>
+                  </div>
+                  <div class="h-3 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-[79%] rounded-full bg-brand"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="mb-2 flex justify-between text-sm">
+                    <b>South Campus</b
+                    ><span class="text-slate-500">42 / 60 occupied</span>
+                  </div>
+                  <div class="h-3 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-[70%] rounded-full bg-[#5d9fda]"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="mb-2 flex justify-between text-sm">
+                    <b>Visitor Parking</b
+                    ><span class="text-slate-500">21 / 40 occupied</span>
+                  </div>
+                  <div class="h-3 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-[53%] rounded-full bg-[#e2a936]"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <h2 class="text-lg font-extrabold">Recent bookings</h2>
+              <div class="mt-5 space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="grid h-9 w-9 place-items-center rounded-full bg-emerald-100 font-bold text-brand"
+                      >RS</span
+                    >
+                    <div>
+                      <b class="block text-sm">Rahul Sharma</b
+                      ><span class="text-xs text-slate-500"
+                        >A-12 · North Campus</span
+                      >
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-emerald-700"
+                    >Confirmed</span
+                  >
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="grid h-9 w-9 place-items-center rounded-full bg-violet-100 font-bold text-violet-700"
+                      >AP</span
+                    >
+                    <div>
+                      <b class="block text-sm">Ananya Patel</b
+                      ><span class="text-xs text-slate-500"
+                        >B-07 · South Campus</span
+                      >
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-amber-600">Pending</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="grid h-9 w-9 place-items-center rounded-full bg-orange-100 font-bold text-orange-700"
+                      >VK</span
+                    >
+                    <div>
+                      <b class="block text-sm">Vikram Kumar</b
+                      ><span class="text-xs text-slate-500"
+                        >C-03 · Visitor Parking</span
+                      >
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-emerald-700"
+                    >Confirmed</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

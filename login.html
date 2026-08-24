@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sign in — ParkEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="min-h-screen bg-[#edf5f1]">
+    <main class="grid min-h-screen lg:grid-cols-2">
+      <section
+        class="noise hidden flex-col justify-between p-12 text-white lg:flex"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-xl font-extrabold"
+          ><span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-lime text-ink"
+            ><i data-lucide="parking-circle" class="h-5"></i></span
+          >ParkEase</a
+        >
+        <div>
+          <p
+            class="mb-5 text-sm font-bold uppercase tracking-[.18em] text-lime"
+          >
+            Welcome back
+          </p>
+          <h1 class="max-w-lg text-5xl font-extrabold leading-tight">
+            Parking that fits your day.
+          </h1>
+          <p class="mt-5 max-w-md leading-7 text-slate-300">
+            See live availability, reserve your space, and keep your parking
+            history in one calm place.
+          </p>
+        </div>
+        <p class="text-sm text-slate-400">
+          Automated Parking Management System
+        </p>
+      </section>
+      <section class="flex items-center justify-center p-6">
+        <div
+          class="w-full max-w-md rounded-2xl bg-white p-7 shadow-xl shadow-emerald-950/5 sm:p-9"
+        >
+          <a
+            href="index.html"
+            class="mb-8 flex items-center gap-2 text-xl font-extrabold lg:hidden"
+            ><span
+              class="grid h-9 w-9 place-items-center rounded-xl bg-brand text-black"
+              ><i data-lucide="parking-circle" class="h-5"></i></span
+            >ParkEase</a
+          >
+          <h2 class="text-3xl font-extrabold">Sign in</h2>
+          <p class="mt-2 text-sm text-slate-500">
+            Enter your details to access your parking dashboard.
+          </p>
+          <form
+            class="mt-7 space-y-4"
+            onsubmit="
+              event.preventDefault();
+              location.href = 'dashboard.html';
+            "
+          >
+            <label class="block text-sm font-bold"
+              >Email address<input
+                type="email"
+                required
+                value="rahul.sharma@example.com"
+                class="mt-1.5 w-full rounded-xl border border-slate-200 px-3.5 py-3 outline-none focus:border-brand focus:ring-2 focus:ring-emerald-100" /></label
+            ><label class="block text-sm font-bold"
+              >Password<input
+                type="password"
+                required
+                value="password"
+                class="mt-1.5 w-full rounded-xl border border-slate-200 px-3.5 py-3 outline-none focus:border-brand focus:ring-2 focus:ring-emerald-100"
+            /></label>
+            <div class="flex items-center justify-between text-sm">
+              <label class="flex items-center gap-2 text-slate-600"
+                ><input type="checkbox" class="accent-brand" /> Remember
+                me</label
+              ><a href="#" class="font-bold text-brand">Forgot password?</a>
+            </div>
+            <button class="btn-primary w-full">
+              Sign in <i data-lucide="arrow-right" class="h-4"></i>
+            </button>
+          </form>
+          <p class="mt-6 text-center text-sm text-slate-600">
+            New to ParkEase?
+            <a href="register.html" class="font-bold text-brand"
+              >Create an account</a
+            >
+          </p>
+          <p
+            class="mt-8 rounded-lg bg-emerald-50 px-3 py-2 text-center text-xs text-emerald-800"
+          >
+            Demo: submit the prefilled form to enter the dashboard.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

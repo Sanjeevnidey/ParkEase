@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Dashboard — ParkEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
+      <aside
+        data-sidebar
+        class="fixed inset-y-0 z-40 flex w-64 -translate-x-full flex-col border-r border-slate-200 bg-white p-5 transition-transform lg:sticky lg:top-0 lg:h-screen lg:w-auto lg:translate-x-0"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-xl font-extrabold"
+          ><span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-brand text-black"
+            ><i data-lucide="parking-circle" class="h-5"></i></span
+          >ParkEase</a
+        >
+        <p
+          class="mt-10 px-2 text-xs font-bold uppercase tracking-[.15em] text-slate-400"
+        >
+          Main menu
+        </p>
+        <nav class="mt-3 space-y-1">
+          <a data-page="dashboard.html" class="side-link" href="dashboard.html"
+            ><i data-lucide="layout-dashboard"></i>Dashboard</a
+          ><a data-page="booking.html" class="side-link" href="booking.html"
+            ><i data-lucide="calendar-plus"></i>Book a slot</a
+          ><a data-page="history.html" class="side-link" href="history.html"
+            ><i data-lucide="history"></i>Parking history</a
+          >
+        </nav>
+        <div class="mt-auto">
+          <a class="side-link" href="index.html"
+            ><i data-lucide="log-out"></i>Sign out</a
+          >
+          <div class="mt-4 flex items-center gap-3 rounded-xl bg-[#f2f7f4] p-3">
+            <span
+              class="grid h-9 w-9 place-items-center rounded-full bg-brand text-sm font-bold text-white"
+              >RS</span
+            >
+            <div>
+              <p class="text-sm font-bold">Rahul Sharma</p>
+              <p class="text-xs text-slate-500">Student account</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <header
+          class="flex items-center justify-between border-b border-slate-200 bg-white px-5 py-4 sm:px-8"
+        >
+          <div class="flex items-center gap-3">
+            <button data-menu class="lg:hidden">
+              <i data-lucide="menu"></i>
+            </button>
+            <div>
+              <p class="text-sm text-slate-500">Monday, 24 August</p>
+              <h1 class="text-xl font-extrabold">Good morning, Rahul</h1>
+            </div>
+          </div>
+          <button
+            class="relative grid h-10 w-10 place-items-center rounded-full bg-slate-100"
+          >
+            <i data-lucide="bell" class="h-5"></i
+            ><span
+              class="absolute right-2 top-2 h-2 w-2 rounded-full bg-orange-400"
+            ></span>
+          </button>
+        </header>
+        <div class="mx-auto max-w-7xl p-5 sm:p-8">
+          <section class="rounded-2xl bg-[#0c2623] p-6 text-white sm:p-8">
+            <div
+              class="flex flex-col justify-between gap-5 sm:flex-row sm:items-center"
+            >
+              <div>
+                <p class="text-sm text-emerald-100">
+                  Your next parking session
+                </p>
+                <h2 class="mt-1 text-2xl font-extrabold">
+                  No active reservation
+                </h2>
+                <p class="mt-2 text-sm text-slate-300">
+                  Reserve your preferred spot before arriving at campus.
+                </p>
+              </div>
+              <a
+                class="btn-primary !bg-lime !text-ink hover:!bg-[#c9e94c]"
+                href="booking.html"
+                >Book a slot <i data-lucide="arrow-up-right" class="h-4"></i
+              ></a>
+            </div>
+          </section>
+          <section class="mt-7 grid gap-4 sm:grid-cols-3">
+            <div class="stat-card">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-semibold text-slate-500"
+                  >Available spaces</span
+                ><i data-lucide="circle-parking" class="h-5 text-brand"></i>
+              </div>
+              <p class="mt-3 text-3xl font-extrabold">
+                16 <span class="text-sm font-medium text-slate-400">/ 48</span>
+              </p>
+              <p class="mt-2 text-xs font-semibold text-emerald-700">
+                ↑ 4 more than yesterday
+              </p>
+            </div>
+            <div class="stat-card">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-semibold text-slate-500"
+                  >This month's visits</span
+                ><i data-lucide="car-front" class="h-5 text-brand"></i>
+              </div>
+              <p class="mt-3 text-3xl font-extrabold">12</p>
+              <p class="mt-2 text-xs text-slate-500">
+                Last visit: 21 Aug, 10:15 AM
+              </p>
+            </div>
+            <div class="stat-card">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-semibold text-slate-500"
+                  >Parking spend</span
+                ><i data-lucide="wallet-cards" class="h-5 text-brand"></i>
+              </div>
+              <p class="mt-3 text-3xl font-extrabold">₹340</p>
+              <p class="mt-2 text-xs text-slate-500">For August 2026</p>
+            </div>
+          </section>
+          <section class="mt-8 grid gap-6 xl:grid-cols-[1fr_310px]">
+            <div class="stat-card">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <h2 class="text-lg font-extrabold">Parking availability</h2>
+                  <p class="mt-1 text-sm text-slate-500">
+                    North Campus · Level A
+                  </p>
+                </div>
+                <a href="booking.html" class="text-sm font-bold text-brand"
+                  >Open full map →</a
+                >
+              </div>
+              <div class="mt-5 grid grid-cols-4 gap-3 sm:grid-cols-6">
+                <button class="slot available" data-slot="A-01">
+                  <b>A-01</b
+                  ><small class="mt-1 block text-xs">Available</small></button
+                ><button class="slot occupied" disabled>
+                  <b>A-02</b
+                  ><small class="mt-1 block text-xs">Occupied</small></button
+                ><button class="slot available" data-slot="A-03">
+                  <b>A-03</b
+                  ><small class="mt-1 block text-xs">Available</small></button
+                ><button class="slot reserved">
+                  <b>A-04</b
+                  ><small class="mt-1 block text-xs">Reserved</small></button
+                ><button class="slot occupied" disabled>
+                  <b>A-05</b
+                  ><small class="mt-1 block text-xs">Occupied</small></button
+                ><button class="slot available" data-slot="A-06">
+                  <b>A-06</b
+                  ><small class="mt-1 block text-xs">Available</small></button
+                ><button class="slot available" data-slot="A-07">
+                  <b>A-07</b
+                  ><small class="mt-1 block text-xs">Available</small></button
+                ><button class="slot occupied" disabled>
+                  <b>A-08</b
+                  ><small class="mt-1 block text-xs">Occupied</small></button
+                ><button class="slot available" data-slot="A-09">
+                  <b>A-09</b
+                  ><small class="mt-1 block text-xs">Available</small></button
+                ><button class="slot available" data-slot="A-10">
+                  <b>A-10</b
+                  ><small class="mt-1 block text-xs">Available</small></button
+                ><button class="slot occupied" disabled>
+                  <b>A-11</b
+                  ><small class="mt-1 block text-xs">Occupied</small></button
+                ><button class="slot available" data-slot="A-12">
+                  <b>A-12</b><small class="mt-1 block text-xs">Available</small>
+                </button>
+              </div>
+              <div class="mt-5 flex flex-wrap gap-4 text-xs font-semibold">
+                <span
+                  ><i class="status-dot mr-1 bg-emerald-500"></i>Available</span
+                ><span
+                  ><i class="status-dot mr-1 bg-slate-300"></i>Occupied</span
+                ><span
+                  ><i class="status-dot mr-1 bg-amber-400"></i>Reserved</span
+                >
+              </div>
+            </div>
+            <div class="stat-card">
+              <h2 class="text-lg font-extrabold">Quick details</h2>
+              <div class="mt-5 space-y-5 text-sm">
+                <div class="flex gap-3">
+                  <span
+                    class="grid h-9 w-9 place-items-center rounded-lg bg-emerald-50 text-brand"
+                    ><i data-lucide="car"></i
+                  ></span>
+                  <div>
+                    <p class="text-slate-500">Registered vehicle</p>
+                    <p class="font-bold">DL 01 AB 1234</p>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <span
+                    class="grid h-9 w-9 place-items-center rounded-lg bg-emerald-50 text-brand"
+                    ><i data-lucide="clock-3"></i
+                  ></span>
+                  <div>
+                    <p class="text-slate-500">Peak hours today</p>
+                    <p class="font-bold">10:00 AM – 1:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

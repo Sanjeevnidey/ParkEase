@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Create account — ParkEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="min-h-screen bg-[#edf5f1]">
+    <main class="flex min-h-screen items-center justify-center p-5">
+      <div
+        class="grid w-full max-w-5xl overflow-hidden rounded-3xl bg-white shadow-2xl shadow-emerald-950/10 lg:grid-cols-[.85fr_1.15fr]"
+      >
+        <section class="noise p-8 text-white sm:p-11">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 text-xl font-extrabold"
+            ><span
+              class="grid h-9 w-9 place-items-center rounded-xl bg-lime text-ink"
+              ><i data-lucide="parking-circle" class="h-5"></i></span
+            >ParkEase</a
+          >
+          <div class="mt-20">
+            <p class="text-sm font-bold uppercase tracking-[.18em] text-lime">
+              Get started
+            </p>
+            <h1 class="mt-4 text-4xl font-extrabold leading-tight">
+              A better parking routine begins here.
+            </h1>
+            <div class="mt-10 space-y-5 text-sm text-slate-300">
+              <p class="flex gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="h-5 shrink-0 text-lime"
+                ></i>
+                Real-time slot availability
+              </p>
+              <p class="flex gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="h-5 shrink-0 text-lime"
+                ></i>
+                Simple booking management
+              </p>
+              <p class="flex gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="h-5 shrink-0 text-lime"
+                ></i>
+                Secure digital parking records
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="p-8 sm:p-11">
+          <h2 class="text-3xl font-extrabold">Create your account</h2>
+          <p class="mt-2 text-sm text-slate-500">
+            Set up your ParkEase profile in under a minute.
+          </p>
+          <form
+            class="mt-7 grid gap-4 sm:grid-cols-2"
+            onsubmit="
+              event.preventDefault();
+              location.href = 'dashboard.html';
+            "
+          >
+            <label class="block text-sm font-bold"
+              >First name<input
+                required
+                placeholder="Rahul"
+                class="mt-1.5 w-full rounded-xl border border-slate-200 px-3.5 py-3 outline-none focus:border-brand" /></label
+            ><label class="block text-sm font-bold"
+              >Last name<input
+                required
+                placeholder="Sharma"
+                class="mt-1.5 w-full rounded-xl border border-slate-200 px-3.5 py-3 outline-none focus:border-brand" /></label
+            ><label class="block text-sm font-bold sm:col-span-2"
+              >Email address<input
+                type="email"
+                required
+                placeholder="you@example.com"
+                class="mt-1.5 w-full rounded-xl border border-slate-200 px-3.5 py-3 outline-none focus:border-brand" /></label
+            ><label class="block text-sm font-bold sm:col-span-2"
+              >Vehicle number<input
+                required
+                placeholder="DL 01 AB 1234"
+                class="mt-1.5 w-full rounded-xl border border-slate-200 px-3.5 py-3 uppercase outline-none focus:border-brand" /></label
+            ><label class="block text-sm font-bold sm:col-span-2"
+              >Password<input
+                type="password"
+                required
+                placeholder="Create a secure password"
+                class="mt-1.5 w-full rounded-xl border border-slate-200 px-3.5 py-3 outline-none focus:border-brand" /></label
+            ><label
+              class="flex gap-2 text-xs leading-5 text-slate-500 sm:col-span-2"
+              ><input required type="checkbox" class="mt-1 accent-brand" /> I
+              agree to the terms of use and privacy policy.</label
+            ><button class="btn-primary sm:col-span-2">
+              Create account <i data-lucide="arrow-right" class="h-4"></i>
+            </button>
+          </form>
+          <p class="mt-6 text-center text-sm text-slate-600">
+            Already have an account?
+            <a href="login.html" class="font-bold text-brand">Sign in</a>
+          </p>
+        </section>
+      </div>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

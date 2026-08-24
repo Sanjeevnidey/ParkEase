@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Parking History — ParkEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header class="border-b bg-white">
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4"
+      >
+        <a
+          href="dashboard.html"
+          class="flex items-center gap-2 text-xl font-extrabold"
+          ><span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-brand text-black"
+            ><i data-lucide="parking-circle" class="h-5"></i></span
+          >ParkEase</a
+        >
+        <nav class="hidden gap-6 text-sm sm:flex">
+          <a class="nav-link" href="dashboard.html">Dashboard</a
+          ><a class="nav-link" href="booking.html">Book a slot</a
+          ><a data-page="history.html" class="nav-link" href="history.html"
+            >History</a
+          >
+        </nav>
+        <a href="dashboard.html" class="text-sm font-bold text-brand"
+          >← Dashboard</a
+        >
+      </div>
+    </header>
+    <main class="mx-auto max-w-7xl px-5 py-8">
+      <p class="text-sm font-bold uppercase tracking-[.15em] text-brand">
+        Your activity
+      </p>
+      <h1 class="mt-2 text-3xl font-extrabold">Parking history</h1>
+      <div class="mt-7 grid gap-4 sm:grid-cols-3">
+        <div class="stat-card">
+          <p class="text-sm text-slate-500">Total visits</p>
+          <b class="mt-2 block text-3xl">42</b>
+        </div>
+        <div class="stat-card">
+          <p class="text-sm text-slate-500">Hours parked</p>
+          <b class="mt-2 block text-3xl">86.5</b>
+        </div>
+        <div class="stat-card">
+          <p class="text-sm text-slate-500">Total spent</p>
+          <b class="mt-2 block text-3xl">₹1,280</b>
+        </div>
+      </div>
+      <section
+        class="mt-7 overflow-hidden rounded-2xl border border-slate-200 bg-white"
+      >
+        <div class="flex flex-wrap justify-between gap-4 border-b p-5">
+          <h2 class="text-lg font-extrabold">Recent visits</h2>
+          <button
+            class="flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-bold"
+          >
+            <i data-lucide="download" class="h-4"></i>Download receipt
+          </button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[650px] text-left text-sm">
+            <thead
+              class="bg-slate-50 text-xs uppercase tracking-wide text-slate-500"
+            >
+              <tr>
+                <th class="px-5 py-4">Date & time</th>
+                <th class="px-5 py-4">Location</th>
+                <th class="px-5 py-4">Slot</th>
+                <th class="px-5 py-4">Duration</th>
+                <th class="px-5 py-4">Amount</th>
+                <th class="px-5 py-4">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="table-row">
+                <td class="px-5 py-4 font-semibold">
+                  21 Aug 2026<br /><span class="font-normal text-slate-500"
+                    >10:15 AM – 1:00 PM</span
+                  >
+                </td>
+                <td class="px-5 py-4">North Campus</td>
+                <td class="px-5 py-4 font-bold">A-12</td>
+                <td class="px-5 py-4">2h 45m</td>
+                <td class="px-5 py-4 font-bold">₹90</td>
+                <td class="px-5 py-4">
+                  <span
+                    class="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-700"
+                    >Completed</span
+                  >
+                </td>
+              </tr>
+              <tr class="table-row">
+                <td class="px-5 py-4 font-semibold">
+                  18 Aug 2026<br /><span class="font-normal text-slate-500"
+                    >9:45 AM – 4:10 PM</span
+                  >
+                </td>
+                <td class="px-5 py-4">North Campus</td>
+                <td class="px-5 py-4 font-bold">B-04</td>
+                <td class="px-5 py-4">6h 25m</td>
+                <td class="px-5 py-4 font-bold">₹180</td>
+                <td class="px-5 py-4">
+                  <span
+                    class="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-700"
+                    >Completed</span
+                  >
+                </td>
+              </tr>
+              <tr class="table-row">
+                <td class="px-5 py-4 font-semibold">
+                  12 Aug 2026<br /><span class="font-normal text-slate-500"
+                    >11:30 AM – 12:30 PM</span
+                  >
+                </td>
+                <td class="px-5 py-4">South Campus</td>
+                <td class="px-5 py-4 font-bold">C-08</td>
+                <td class="px-5 py-4">1h</td>
+                <td class="px-5 py-4 font-bold">₹30</td>
+                <td class="px-5 py-4">
+                  <span
+                    class="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-700"
+                    >Completed</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
