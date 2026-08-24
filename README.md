@@ -1,4 +1,4 @@
-# ParkEase — Automated Parking Management Frontend
+# ParkEase — Automated Parking Management
 
 A responsive, multi-page static frontend prototype for an Automated Parking Management & Slot Allocation System. It uses Tailwind CSS through its CDN and vanilla JavaScript, with realistic demo-only data.
 
